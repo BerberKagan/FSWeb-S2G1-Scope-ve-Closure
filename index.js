@@ -101,6 +101,10 @@ function macSonucu(callback, ceyrekSayisi){
     evSahibiSkoru=evSahibiSkoru+callback();
     konukTakimSkoru+=callback();
   }
+  while (evSahibiSkoru===konukTakimSkoru) {
+    evSahibiSkoru+=callback();
+    konukTakimSkoru+=callback();
+  }
   return {"EvSahibi": evSahibiSkoru,
   "KonukTakim": konukTakimSkoru}
 }
